@@ -29,7 +29,7 @@ const build = task('build')
 
 const push = task('push')
     .dependsOn([test, build])
-    .dependsOn([runtime.secret('docker-username'), runtime.secret('docker-password')])
+    .dependsOn([runtime.secret('docker_username'), runtime.secret('docker_password')])
     .when(async _ => await git.isTagged({ logger: false }))
     .does(async ctx => {
         await docker.client.push({ tag: await buildTags(), credentials: getDockerCredentials(), logger: ctx?.logger });
@@ -37,8 +37,8 @@ const push = task('push')
 
 function getDockerCredentials(): DockerRegistryCredentials {
     return {
-        username: runtime.argValue('docker-username'),
-        password: runtime.argValue('docker-password')
+        username: runtime.argValue('docker_username'),
+        password: runtime.argValue('docker_password')
     };
 }
 
