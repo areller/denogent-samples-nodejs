@@ -1,6 +1,6 @@
 # denogent-samples-nodejs
 
-[![Actions Status](https://github.com/areller/denogent-samples-nodejs/workflows/build/badge.svg)](https://github.com/areller/denogent/actions)
+[![Actions Status](https://github.com/areller/denogent-samples-nodejs/workflows/build/badge.svg)](https://github.com/areller/denogent-samples-nodejs/actions)
 
 This is a sample of a NodeJS application that is built using [denogent](https://github.com/areller/denogent) + GitHub Actions
 
