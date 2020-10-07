@@ -5,6 +5,8 @@ name: build
   push:
     branches:
       - master
+    tags:
+      - v*
 jobs:
   ubuntu-latest:
     name: ubuntu-latest
@@ -31,5 +33,5 @@ jobs:
           REDIS_HOST: localhost
           REDIS_PORT: '6379'
           REDIS_PORTS: '6379'
-          docker-username: '${{ secrets.docker-username }}'
-          docker-password: '${{ secrets.docker-password }}'
+          docker_username: '${{ secrets.docker_username }}'
+          docker_password: '${{ secrets.docker_password }}'

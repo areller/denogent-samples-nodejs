@@ -56,7 +56,8 @@ createBuilder({
     targetTasks: push,
     ciIntegrations: [
         createGitHubActions({
-            image: 'ubuntu-latest'
+            image: 'ubuntu-latest',
+            onPushTags: ['v*']
         })
     ] // define CI integrations here
 });
