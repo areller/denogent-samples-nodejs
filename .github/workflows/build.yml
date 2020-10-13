@@ -27,8 +27,8 @@ jobs:
         uses: actions/setup-node@v1
       - name: run build
         run: >-
-          deno run -A -q --unstable build/build.ts --serial --skip-services
-          --runtime gh-actions run
+          deno run -A -q --unstable build/build.ts run --serial --runtime
+          gh-actions
         env:
           REDIS_HOST: localhost
           REDIS_PORT: '6379'
